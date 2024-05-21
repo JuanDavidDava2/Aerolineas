@@ -2,10 +2,15 @@
 {
     public class Reservas
     {
-        public int Id { get; set; } // PK
-        public int PasajeroId { get; set; } // FK
-        public int VueloId { get; set; } // FK
+        public int IdReserva { get; set; }
+        public int IdPasajero { get; set; }
+        public int IdVuelo { get; set; }
         public DateTime FechaReserva { get; set; }
-        public string Estado { get; set; } // Confirmada, Cancelada
+        public string Estado { get; set; }
+
+        public Pasajeros Pasajero { get; set; }
+        public Vuelos Vuelo { get; set; }
+        public ICollection<Itinerarios> Itinerarios { get; set; }
     }
+
 }

@@ -2,8 +2,10 @@
 {
     public class Itinerarios
     {
-        public int Id { get; set; } // PK
-        public int IdReserva { get; set; } // FK
+        public int IdItinerario { get; set; }
+        public int IdReserva { get; set; }
         public string Detalle { get; set; }
+
+        public Reservas Reserva { get; set; }
     }
 }

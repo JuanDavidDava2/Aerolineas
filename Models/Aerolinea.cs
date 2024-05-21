@@ -2,9 +2,9 @@
 {
     public class Aerolinea
     {
-        public int Id { get; set; }
+        public int IdAerolinea { get; set; }
+        public string? NombreAerolinea { get; set; }
 
-        public string Name { get; set; }
-
+        public ICollection<Vuelos> Vuelo { get; set; }
     }
 }
